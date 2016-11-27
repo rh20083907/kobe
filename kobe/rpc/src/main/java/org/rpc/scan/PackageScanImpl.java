@@ -28,7 +28,6 @@ public class PackageScanImpl implements PackageScan {
 	private Set<Class<?>> doScan(Set<Class<?>> set, Enumeration<URL> dirs, String packagePath) {
 		while (dirs.hasMoreElements()) {
 			URL url = dirs.nextElement();
-			String protocol = url.getProtocol();
 			File f = new File(url.getFile());
 			if (f.isDirectory()) {
 				doScanDir(set, packagePath, f);

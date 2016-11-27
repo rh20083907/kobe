@@ -1,14 +1,17 @@
 package org.rpc.http;
 
+import org.rpc.invoke.Woker;
+
 public class HttpServerimp implements HttpServer {
 
 	public void doGet(Request request, Response response) {
-		response.print("hello");
-		response.print("world ");
-		response.flush();
+		request.getParamter("");
 	}
 
 	public void doPost(Request request, Response response) {
-
+		byte[] s = response.getBytes();
+		String result = Woker.work(s);
+		response.print(result);
+		response.flush();
 	}
 }

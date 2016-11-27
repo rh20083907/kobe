@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 public class Json {
 	public static Gson gson = new Gson();
 
-	public String toJson(Object obj) {
+	public static String toJson(Object obj) {
 		if (obj == null) {
 			return "";
 		}
