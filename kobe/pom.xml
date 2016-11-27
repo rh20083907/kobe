@@ -20,5 +20,7 @@
   <modules>
     <module>orm</module>
     <module>rpc</module>
+    <module>test</module>
+    <module>rest</module>
   </modules>
 </project>
