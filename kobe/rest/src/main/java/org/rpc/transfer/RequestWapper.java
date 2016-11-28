@@ -2,6 +2,7 @@ package org.rpc.transfer;
 
 import java.io.Serializable;
 
+
 public class RequestWapper implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public String packagaName;
@@ -42,6 +43,7 @@ public class RequestWapper implements Serializable {
 		this.obj = obj;
 	}
 
+ 
 
 	public Class<?>[] getParameterClass() {
 		return parameterClass;

@@ -13,7 +13,7 @@ public class Woker {
 
 	public static String work(byte[] bytes) {
 		RequestWapper requestWapper = SerialiUtil.ByteToObject(bytes);
-		RegKey regKey = requestWapper.getRegKey();
+		RegKey regKey =RegKey.getRegKey(requestWapper);
 		ServiceRegister register = ServiceRegister.getSing();
 		Object obj = register.get(regKey);
 		Method method = null;

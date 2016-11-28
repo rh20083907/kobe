@@ -49,7 +49,7 @@ public class Response {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		int i = 0;
 		try {
-			while ((i = in.read()) > 0) {
+			while ((i = in.read()) > -1) {
 				out.write(i);
 			}
 		} catch (IOException e) {

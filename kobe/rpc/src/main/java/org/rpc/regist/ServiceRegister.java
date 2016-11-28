@@ -43,10 +43,10 @@ public class ServiceRegister {
 
 	private void regMethod(Class<?> clazz, Method method) {
 		Class<?>[] clazzs = method.getParameterTypes();
-		String pack = clazz.getPackage().getName();
+		String pack = clazz.getInterfaces()[0].getPackage().getName();
 		List<String> list = Arrays.asList(clazzs).stream().map(s -> s.getName()).collect(Collectors.toList());
 		RegKey requestWapper = new RegKey();
-		requestWapper.setClassName(clazz.getName());
+		requestWapper.setClassName(clazz.getInterfaces()[0].getName());
 		requestWapper.setMethod(method.getName());
 		requestWapper.setPackagaName(pack);
 		requestWapper.setParameterType(list);

@@ -10,6 +10,6 @@ public class RpcMain {
 		ServiceRegister serviceRegister =  ServiceRegister.getSing();
 		serviceRegister.reg("com.wang");
 		httpProvider http = new HttpProviderImpl();
-		http.start("wang", 8080);
+		http.start("rpc", 8083);
 	}
 }

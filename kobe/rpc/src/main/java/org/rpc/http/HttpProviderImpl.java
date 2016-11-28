@@ -19,7 +19,7 @@ public class HttpProviderImpl implements httpProvider {
 		HttpServer httpserver = provider.createHttpServer(new InetSocketAddress(8080), 100);
 		httpserver.createContext("/rpc", new HttpHandler() {
 			public void handle(HttpExchange arg0) throws IOException {
-				System.out.println("accept an exchange from internet.....");
+				//System.out.println("accept an exchange from internet.....");
 				if (arg0.getRequestMethod().equals("GET")) {
 					doGet(arg0);
 				} else if (arg0.getRequestMethod().equals("POST")) {
@@ -51,7 +51,7 @@ public class HttpProviderImpl implements httpProvider {
 		response.setHttpExchange(httpExchange);
 		request.setHttpExchange(httpExchange);
 		HttpServerimp httpServer = new HttpServerimp();
-		httpServer.doGet(request, response);
+		httpServer.doPost(request, response);
 	}
 
 	@Override

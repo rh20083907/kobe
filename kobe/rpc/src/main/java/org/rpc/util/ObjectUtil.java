@@ -18,4 +18,14 @@ public class ObjectUtil {
 		}
 		return i;
 	}
+
+	public static boolean equals(Object obj, Object obj1) {
+		if (obj == null && obj1 == null) {
+			return true;
+		}
+		if (obj != null && obj1 == null) {
+			return false;
+		}
+		return obj.equals(obj1);
+	}
 }
