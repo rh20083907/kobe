@@ -13,13 +13,12 @@ import com.sun.net.httpserver.spi.HttpServerProvider;
 
 @SuppressWarnings("restriction")
 public class HttpProviderImpl implements httpProvider {
-
 	public static void main(String[] args) throws IOException {
 		HttpServerProvider provider = HttpServerProvider.provider();
 		HttpServer httpserver = provider.createHttpServer(new InetSocketAddress(8080), 100);
 		httpserver.createContext("/rpc", new HttpHandler() {
 			public void handle(HttpExchange arg0) throws IOException {
-				//System.out.println("accept an exchange from internet.....");
+				// System.out.println("accept an exchange from internet.....");
 				if (arg0.getRequestMethod().equals("GET")) {
 					doGet(arg0);
 				} else if (arg0.getRequestMethod().equals("POST")) {
@@ -31,7 +30,7 @@ public class HttpProviderImpl implements httpProvider {
 		});
 		httpserver.setExecutor(null);
 		httpserver.start();
-		System.out.println("server started");
+		System.out.println(" server start ");
 	}
 
 	public static void doGet(HttpExchange httpExchange) {
@@ -66,7 +65,7 @@ public class HttpProviderImpl implements httpProvider {
 		}
 		httpserver.createContext("/rpc", new HttpHandler() {
 			public void handle(HttpExchange arg0) throws IOException {
-				System.out.println("accept an exchange from internet.....");
+				// System.out.println("accept an exchange from internet.....");
 				if (arg0.getRequestMethod().equals("GET")) {
 					doGet(arg0);
 				} else if (arg0.getRequestMethod().equals("POST")) {
@@ -78,7 +77,7 @@ public class HttpProviderImpl implements httpProvider {
 		});
 		httpserver.setExecutor(null);
 		httpserver.start();
-		System.out.println("server started");
+		System.out.println("  server start ");
 
 	}
 }

@@ -31,7 +31,6 @@ public class ProxyServiceImpl implements ProxyService {
 				requestWapper.setPackagaName(t.getPackage().getName());
 				requestWapper.setParameterClass(method.getParameterTypes());
 				byte[] bytes = SerialiUtil.ObjectToByte(requestWapper);
-
 				URL url = new URL("http://127.0.0.1:8083/rpc");
 				HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
 				urlConn.setRequestProperty("Content-Length", bytes.length + "");
@@ -41,13 +40,11 @@ public class ProxyServiceImpl implements ProxyService {
 				OutputStream out = urlConn.getOutputStream();
 				out.write(bytes);
 				out.flush();
-
 				InputStream in = urlConn.getInputStream();
 				BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-				String temp = "";
-				StringBuilder sb=new StringBuilder();
+				String temp = null;
+				StringBuilder sb = new StringBuilder();
 				while ((temp = reader.readLine()) != null) {
-					//System.err.println("server response:" + temp);// 打印收到的信息
 					sb.append(temp);
 				}
 				reader.close();

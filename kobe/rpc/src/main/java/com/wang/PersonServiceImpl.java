@@ -7,4 +7,8 @@ public class PersonServiceImpl implements PersonService {
 	public String say(String name) {
 		return " hello to " + name;
 	}
+
+	public int add(int a, int b) {
+		return a + b;
+	}
 }
