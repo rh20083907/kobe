@@ -9,7 +9,6 @@ public class RestMain {
 		PersonService p = proxyService.getObj(PersonService.class);
 		String str = p.say(" nihao ");
 		System.out.println(str);
-
 		System.out.println(p.add(1, 2));
 	}
 }
