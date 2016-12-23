@@ -76,14 +76,14 @@ public class RegKey {
 	}
 
 	public static void main(String[] args) {
-		Map<RegKey, Object> map=new HashMap<>();
-		RegKey r1=new RegKey();
-		r1.className="111";
-		r1.method="333";
-		r1.packagaName="12";
-		r1.parameterType=Arrays.asList("123");
-		RegKey r2= Json.getObj( Json.toJson(r1),RegKey.class);
-		System.out.println(r1==r2);
+		Map<RegKey, Object> map = new HashMap<>();
+		RegKey r1 = new RegKey();
+		r1.className = "111";
+		r1.method = "333";
+		r1.packagaName = "12";
+		r1.parameterType = Arrays.asList("123");
+		RegKey r2 = Json.getObj(Json.toJson(r1), RegKey.class);
+		System.out.println(r1 == r2);
 		map.put(r1, new Object());
 		System.out.println(map.get(r2));
 	}

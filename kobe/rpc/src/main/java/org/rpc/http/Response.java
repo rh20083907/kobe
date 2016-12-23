@@ -7,11 +7,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.spi.*;
-
 import org.rpc.util.ExceptionUtil;
 
+import com.sun.net.httpserver.HttpExchange;
+
+@SuppressWarnings("restriction")
 public class Response {
 
 	private HttpExchange httpExchange;

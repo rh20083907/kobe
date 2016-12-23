@@ -42,7 +42,6 @@ public class RequestWapper implements Serializable {
 		this.obj = obj;
 	}
 
-
 	public Class<?>[] getParameterClass() {
 		return parameterClass;
 	}

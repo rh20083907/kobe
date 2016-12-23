@@ -5,7 +5,9 @@ import java.util.Map;
 
 import com.sun.net.httpserver.HttpExchange;
 
+@SuppressWarnings("restriction")
 public class Request {
+
 	private HttpExchange httpExchange;
 
 	public Map<String, Object> map = new HashMap<>();

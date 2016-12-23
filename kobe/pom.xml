@@ -25,7 +25,7 @@
 		<module>rpc</module>
 		<module>test</module>
 		<module>rest</module>
-    <module>demo</module>
+	    <module>demo</module>
   </modules>
 	<dependencies>
 		<dependency>
